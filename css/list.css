@@ -1,0 +1,89 @@
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+.list_container {
+  width: 100%;
+  height: 100%;
+}
+.list_container .list_header {
+  width: 100%;
+  height: 45px;
+  padding: 13.5px 35px;
+  position: relative;
+  background: url(../images/header-bg.png) repeat-x;
+  background-size: 2px 45px;
+  z-index: 99;
+}
+.list_container .list_header .search {
+  width: 100%;
+  border: 1px solid #eeeeee;
+}
+.list_container .list_header a {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+}
+.list_container .list_header a:nth-of-type(1) {
+  left: 5px;
+  top: 0;
+  line-height: 45px;
+  font-size: 30px;
+  font-family: '宋体';
+}
+.list_container .list_header a:nth-of-type(2) {
+  top: 13.5px;
+  right: 5px;
+  background: url("../images/sprites.png") no-repeat -61px 0;
+  background-size: 200px 200px;
+}
+.list_container .list_main {
+  width: 100%;
+  height: 100%;
+}
+.list_container .list_main .main_left {
+  width: 90px;
+  height: 100%;
+}
+.list_container .list_main .main_left ul {
+  width: 100%;
+}
+.list_container .list_main .main_left ul li {
+  width: 100%;
+  height: 50px;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
+  text-align: center;
+  line-height: 50px;
+}
+.list_container .list_main .main_left ul li.current {
+  border-right: none;
+}
+.list_container .list_main .main_left ul li.current a {
+  color: red;
+}
+.list_container .list_main .main_left ul li a {
+  color: black;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.list_container .list_main .main_right {
+  padding: 5px;
+  overflow: hidden;
+}
+.list_container .list_main .main_right ul {
+  width: 100%;
+}
+.list_container .list_main .main_right ul li {
+  float: left;
+  width: 33.3333%;
+}
+.list_container .list_main .main_right ul li a {
+  color: black;
+}
+.list_container .list_main .main_right ul li a img {
+  width: 80%;
+  margin: 0 auto;
+}

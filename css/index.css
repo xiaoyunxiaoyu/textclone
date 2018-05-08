@@ -1,0 +1,250 @@
+body{
+    background-color: #eee;
+}
+/*顶部通栏的样式*/
+.jd_container{
+    width: 100%;
+    max-width:800px;
+    min-width:300px;
+    margin: 0 auto;
+}
+.jd_header{
+    max-width:800px;
+    min-width:300px;
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    padding-left:70px;
+    padding-right:46px;
+    background-color: rgba(201, 21, 35,0);
+}
+.jd_header .jd_header_logo{
+    width: 60px;
+    height: 36px;
+    position: absolute;
+    left: 5px;
+    top:2px;
+    background-image: url("../images/sprites.png");
+    background-repeat: no-repeat;
+    background-position: 0 -103px;
+    background-size:200px 200px;
+}
+.jd_header .jd_header_search{
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    border-radius:15px;
+    padding-left: 24px;
+
+}
+.jd_header .jd_header_login{
+    position: absolute;
+    right:10px;
+    top: 0;
+    line-height: 40px;
+    color:white;
+}
+.jd_header .jd_header_grass{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 75px;
+    top: 10px;
+    /*注意：由于手机一些手机分辨率是像素点的2倍，小图的话会放大失真，所以要用大图放小
+        大图放小（background-size:width/2,height/2）之后，对应精灵图的left和top也要放小相同的倍数
+    */
+    /*在这里，sprites.png图片大小是400*400,现在设置为200*200,同样精灵图中放大镜图标对应的位置也由原来的-120px,220px缩小2倍至-60px,-110px*/
+    background: url("../images/sprites.png") no-repeat -60px -110px/200px 200px;
+}
+
+/*顶部轮播图样式*/
+.loop{
+    width: 100%;
+    overflow:hidden;
+    position: relative;
+}
+.loop .jd_banner{
+    width: 1000%;
+    transform:translateX(-10%);
+}
+.loop .jd_banner li{
+    float: left;
+    width: 10%;
+}
+.loop .jd_banner li img{
+    width: 100%;
+}
+.loop .jd_square{
+    position: absolute;
+    bottom:10px;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.loop .jd_square li{
+    float: left;
+    width: 6px;
+    height: 6px;
+    border: 1px solid white;
+    border-radius:3px;
+    margin-left: 5px;
+}
+.loop .jd_square li.current{
+    background-color: #fff;
+}
+
+/*顶部导航栏*/
+.header_nav{
+    width: 100%;
+    border-bottom:1px solid #aaa;
+    background-color: #fff;
+}
+.header_nav ul{
+    width: 100%;
+    padding:5px;
+}
+.header_nav li{
+    width: 25%;
+    float: left;
+}
+.header_nav li a{
+    color:gray;
+    display:block;
+    text-align: center;
+}
+.header_nav li img{
+    display:block;
+    width: 60%;
+    margin: 5px auto;
+}
+/*主要内容区*/
+.jd_main{
+    width: 100%;
+    height: 800px;
+    padding: 0 5px;
+    margin-top: 10px;
+}
+.jd_main .main_content{
+    background-color: white;
+    min-height: 156px;
+    margin-top: 8px;
+    box-shadow:0 0 3px gray;
+}
+.jd_main .main_content .content_top{
+    height: 32px;
+    border-bottom:1px solid #999999;
+}
+.jd_main .main_content:first-child .content_top{
+    border-bottom:none;
+}
+.jd_main .main_content .content_bottom{
+    
+}
+/*第一个main_content样式*/
+.jd_main .main_content:nth-child(1) .content_top span{
+    width: 20px;
+    height: 25px;
+    margin: 3.5px 0 0 5px;
+    float: left;
+    background: url("../images/seckill-icon.png") no-repeat;
+    background-size:20px 25px;
+}
+.jd_main .main_content:nth-child(1) .content_top p{
+    line-height: 32px;
+    color:rgb(201, 21, 35);
+    margin-left: 5px;
+    float: left;
+}
+.jd_main .main_content:nth-child(1) .content_top ul{
+    padding-top: 8.5px;
+}
+.jd_main .main_content:nth-child(1) .content_top li{
+    float: left;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    color:white;
+    line-height: 15px;
+    text-align: center;
+    margin-left: 2px;
+}
+.jd_main .main_content:nth-child(1) .content_top li:nth-child(3n){
+    background-color: transparent;
+    width: 5px;
+    color:#232326;
+}
+.jd_main .main_content:nth-child(1) .content_top a{
+    color:gray;
+    float: right;
+    display: inline-block;
+    margin-right: 5px;
+}
+.jd_main .main_content:nth-child(1) .content_bottom ul{
+    width: 100%;
+}
+.jd_main .main_content:nth-child(1) .content_bottom li{
+    float: left;
+    width: 33.33333%;
+    padding: 2px 0;
+    text-align: center;
+}
+.jd_main .main_content:nth-child(1) .content_bottom li a{
+    width: 100%;
+    display:inline-block;
+    margin: 0 auto;
+}
+.jd_main .main_content:nth-child(1) .content_bottom li a{
+    border-right:1px solid #999999;
+}
+.jd_main .main_content:nth-child(1) .content_bottom li:last-child a{
+    border-right:none;
+}
+.jd_main .main_content:nth-child(1) .content_bottom li img{
+    width: 60%;
+}
+.jd_main .main_content:nth-child(1) .content_bottom li p{
+    margin-top: 2px;
+    font-size:12px;
+}
+.jd_main .main_content:nth-child(1) .content_bottom li p:nth-of-type(1){
+    color:rgb(201, 21, 35);
+}
+.jd_main .main_content:nth-child(1) .content_bottom li p:nth-of-type(2){
+    text-decoration:line-through;
+}
+/*后面所有main_content样式*/
+/*除去第一个main_content n+2*/
+.jd_main .main_content:nth-child(n+2) .content_top{
+    position: relative;
+}
+.jd_main .main_content:nth-child(n+2) .content_top span{
+    color:rgb(201, 21, 35);
+    position: relative;
+    left:15px;
+    top:0;
+    line-height: 32px;
+}
+.jd_main .main_content:nth-child(n+2) .content_top span:before{
+    content:'';
+    display:block;
+    width: 5px;
+    height: 14px;
+    background-color:rgb(201, 21, 35);
+    position:absolute;
+    top: 3px;
+    left:-10px;
+}
+.jd_main .main_content:nth-child(n+2) .content_bottom ul{
+    width: 100%;
+}
+.jd_main .main_content:nth-child(n+2) .content_bottom ul li{
+    width: 50%;
+}
+.jd_main .main_content:nth-child(n+2) .content_bottom ul li a{
+    width: 100%;
+    display:block;
+}
+.jd_main .main_content:nth-child(n+2) .content_bottom li a img{
+    width: 100%;
+    display:block;
+}
